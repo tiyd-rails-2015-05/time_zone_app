@@ -1,0 +1,13 @@
+<h1>Enter your time zone</h1>
+
+<%= form_tag time_zones_time_path do %>
+  <%= select_tag :zone, options_for_select(["Eastern", "Central", "Mountain", "Pacific" ], "Eastern") %>
+  <%= submit_tag "Get my time" %>
+<% end %>
+
+
+<ul>
+  <% @array.each do |a| %>
+    <li><%= a %></li>
+  <% end %>
+</ul>
